@@ -194,6 +194,152 @@ Wie würden Sie diese E-Mail kategorisieren?`,
       },
       notSupportedImage: 'Das ausgewählte Model unterstützt keine Bilder.',
     },
+    model: {
+      'claude-v4-opus': {
+        label: 'Claude 4 (Opus)',
+        description:
+          'Leistungsstarkes hybrides Reasoning-Modell für komplexe Aufgaben, Programmierung und KI-Agenten mit 200K Token Kontextfenster.',
+      },
+      'claude-v4.1-opus': {
+        label: 'Claude 4.1 (Opus)',
+        description:
+          'Leistungsstarkes Opus-Modell mit verbesserten Reasoning-Fähigkeiten.',
+      },
+      'claude-v4.5-opus': {
+        label: 'Claude 4.5 (Opus)',
+        description:
+          'Hochleistungsfähiges Opus-Modell, das starkes Reasoning mit praktischer Leistung zu einem günstigeren Preis als frühere Opus-Modelle vereint.',
+      },
+      'claude-v4.6-opus': {
+        label: 'Claude 4.6 (Opus)',
+        description:
+          'Flaggschiff-Modell, das sorgfältiger plant, agentische Aufgaben länger durchhält und zuverlässig in riesigen Codebasen arbeitet – mit 1M Token Kontextfenster.',
+      },
+      'claude-v4-sonnet': {
+        label: 'Claude 4 (Sonnet)',
+        description:
+          'Ausgewogenes hybrides Reasoning-Modell, optimiert für Effizienz auf Skala mit 200K Token Kontextfenster.',
+      },
+      'claude-v4.5-sonnet': {
+        label: 'Claude 4.5 (Sonnet)',
+        description:
+          'Sonnet-Modell der vorherigen Generation mit starker Programmierleistung und erweiterten Fähigkeiten für länger andauernde Aufgaben.',
+      },
+      'claude-v4.6-sonnet': {
+        label: 'Claude 4.6 (Sonnet)',
+        description:
+          'Umfassendes Upgrade des Mid-Tier-Modells mit verbesserten Fähigkeiten beim Programmieren, Computer Use, Long-Context-Reasoning und in der Agentenplanung – inklusive 1M Token Kontextfenster.',
+      },
+      'claude-v4.5-haiku': {
+        label: 'Claude 4.5 (Haiku)',
+        description:
+          'Das schnellste und intelligenteste Haiku-Modell mit nahezu Spitzenleistung und erweiterten Denkfähigkeiten.',
+      },
+      'claude-v3-haiku': {
+        label: 'Claude 3 (Haiku)',
+        description:
+          'Vorgängerversion optimiert für Geschwindigkeit und Kompaktheit mit nahezu sofortiger Reaktionszeit.',
+      },
+      'claude-v3.5-sonnet': {
+        label: 'Claude 3.5 (Sonnet) v1',
+        description:
+          'Eine frühere Version von Claude 3.5. Unterstützt eine Vielzahl von Aufgaben, aber v2 bietet eine höhere Genauigkeit.',
+      },
+      'claude-v3.5-sonnet-v2': {
+        label: 'Claude 3.5 (Sonnet) v2',
+        description:
+          'Die aktuelle Version von Claude 3.5 – ein verbessertes Modell, das auf v1 aufbaut und höhere Genauigkeit sowie bessere Leistung bietet.',
+      },
+      'claude-v3.7-sonnet': {
+        label: 'Claude 3.7 Sonnet',
+        description:
+          'Hybrides Reasoning-Modell, das schnelle Antworten und tiefgehende Analysefähigkeiten optimal ausbalanciert.',
+      },
+      'claude-v3.5-haiku': {
+        label: 'Claude 3.5 (Haiku) v1',
+        description:
+          'Die aktuelle Version mit noch schnelleren Antworten und verbesserten Fähigkeiten gegenüber Haiku 3.',
+      },
+      'claude-v3-opus': {
+        label: 'Claude 3 (Opus)',
+        description: 'Leistungsstarkes Modell für hochkomplexe Aufgaben.',
+      },
+      'mistral-7b-instruct': {
+        label: 'Mistral 7B',
+        description:
+          'Unterstützt englische Textgenerierung und bietet natürliche Programmierfähigkeiten',
+      },
+      'mixtral-8x7b-instruct': {
+        label: 'Mistral-8x7B',
+        description:
+          'Ein beliebtes, hochwertiges Mixture-of-Experts (MoE)-Modell – ideal für Textzusammenfassungen, Frage-Antwort-Systeme, Textklassifikation, Textvervollständigung und Codegenerierung.',
+      },
+      'mistral-large': {
+        label: 'Mistral Large',
+        description:
+          'Ideal für komplexe Aufgaben, die umfangreiche Reasoning-Fähigkeiten erfordern oder stark spezialisiert sind, wie synthetische Text- oder Codegenerierung.',
+      },
+      'mistral-large-2': {
+        label: 'Mistral Large2',
+        description:
+          'Fortschrittliches LLM mit Unterstützung für Dutzende Sprachen und über 80 Programmiersprachen, inklusive erstklassiger Agenten-Funktionen wie nativen Funktionsaufrufen, JSON-Ausgabe und Reasoning.',
+      },
+      'amazon-nova-pro': {
+        label: 'Amazon Nova Pro',
+        description:
+          'Ein hochleistungsfähiges multimodales Modell mit der besten Kombination aus Genauigkeit, Geschwindigkeit und Kosten für vielfältige Aufgaben.',
+      },
+      'amazon-nova-lite': {
+        label: 'Amazon Nova Lite',
+        description:
+          'Ein äußerst kostengünstiges multimodales Modell, das Bild-, Video- und Texteingaben blitzschnell verarbeitet.',
+      },
+      'amazon-nova-micro': {
+        label: 'Amazon Nova Micro',
+        description:
+          'Ein reines Textmodell mit den niedrigsten Latenzzeiten der Amazon-Nova-Familie zu sehr geringen Kosten.',
+      },
+      'deepseek-r1': {
+        label: 'DeepSeek R1',
+        description:
+          'Modernstes Reasoning-Modell, optimiert für allgemeines Reasoning, Mathematik, Wissenschaft und Codegenerierung. Unterstützt Englisch und Chinesisch.',
+      },
+      'llama3-3-70b-instruct': {
+        label: 'Meta Llama 3.3 70B Instruct',
+        description:
+          'Neuestes Llama 3-Modell mit Leistung auf Niveau des 405B-Modells zu geringeren Kosten – mit hervorragenden Reasoning- und Instruktionsbefolgungsfähigkeiten.',
+      },
+      'llama3-2-1b-instruct': {
+        label: 'Meta Llama 3.2 1B Instruct',
+        description:
+          'Leichtgewichtiges Modell optimiert für Edge-Geräte mit effizienter On-Device-Verarbeitung für persönliches Informationsmanagement und mehrsprachigen Wissensabruf.',
+      },
+      'llama3-2-3b-instruct': {
+        label: 'Meta Llama 3.2 3B Instruct',
+        description:
+          'Kompaktes Modell für Textgenerierung, Zusammenfassungen und Sentimentanalyse mit niedriger Latenz – ideal für mobile KI-Anwendungen.',
+      },
+      'llama3-2-11b-instruct': {
+        label: 'Meta Llama 3.2 11B Instruct',
+        description:
+          'Multimodales Modell mit exzellentem Bildverständnis und visuellem Reasoning – geeignet für Bildbeschriftung, visuelle Fragebeantwortung und Dokumentenverarbeitung.',
+      },
+      'llama3-2-90b-instruct': {
+        label: 'Meta Llama 3.2 90B Instruct',
+        description:
+          'Großes multimodales Modell mit fortgeschrittenem Bildverständnis und visuellen Reasoning-Fähigkeiten für anspruchsvolle visuelle Intelligenzanwendungen.',
+      },
+      'gpt-oss-20b': {
+        label: 'GPT-OSS 20B',
+        description:
+          'Open-Weight 20B-Parametermodell mit 128K Kontextfenster und Reasoning-Fähigkeiten.',
+      },
+      'gpt-oss-120b': {
+        label: 'GPT-OSS 120B',
+        description:
+          'Open-Weight 120B-Parametermodell mit 128K Kontextfenster und erweiterten Reasoning-Fähigkeiten.',
+      },
+    },
   },
 };
 
