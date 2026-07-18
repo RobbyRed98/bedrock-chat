@@ -18,6 +18,11 @@ const translation = {
       userGroups: 'Grupos de Usuários',
     },
     model: {
+      'claude-v5-sonnet': {
+        label: 'Claude 5 (Sonnet)',
+        description:
+          'O modelo Sonnet mais capaz da Anthropic, com inteligência próxima ao Opus, desenvolvido para codificação, agentes e trabalho profissional em escala. O pensamento adaptativo está sempre ativo.',
+      },
       'claude-v3-haiku': {
         label: 'Claude 3 (Haiku)',
         description:

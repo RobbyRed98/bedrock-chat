@@ -57,6 +57,7 @@ ENABLE_BEDROCK_CROSS_REGION_INFERENCE = (
 
 # Base model IDs mapping
 BASE_MODEL_IDS = {
+    "claude-v5-sonnet": "anthropic.claude-sonnet-5",
     "claude-v4-opus": "anthropic.claude-opus-4-20250514-v1:0",
     "claude-v4.1-opus": "anthropic.claude-opus-4-1-20250805-v1:0",
     "claude-v4.5-opus": "anthropic.claude-opus-4-5-20251101-v1:0",
@@ -92,6 +93,43 @@ BASE_MODEL_IDS = {
 
 # Global inference profiles
 GLOBAL_INFERENCE_PROFILES = {
+    "claude-v5-sonnet": {
+        "supported_regions": [
+            "us-west-2",
+            "us-west-1",
+            "us-east-2",
+            "us-east-1",
+            "sa-east-1",
+            "mx-central-1",
+            "eu-west-3",
+            "eu-west-2",
+            "eu-west-1",
+            "eu-south-2",
+            "eu-south-1",
+            "eu-north-1",
+            "eu-central-2",
+            "eu-central-1",
+            "ca-central-1",
+            "ca-west-1",
+            "ap-southeast-7",
+            "ap-southeast-6",
+            "ap-southeast-5",
+            "ap-southeast-4",
+            "ap-southeast-3",
+            "ap-southeast-2",
+            "ap-southeast-1",
+            "ap-south-2",
+            "ap-south-1",
+            "ap-northeast-3",
+            "ap-northeast-2",
+            "ap-northeast-1",
+            "ap-east-2",
+            "me-central-1",
+            "me-south-1",
+            "il-central-1",
+            "af-south-1",
+        ]
+    },
     "claude-v4.5-opus": {
         "supported_regions": [
             "us-west-2",
@@ -268,6 +306,26 @@ GLOBAL_INFERENCE_PROFILES = {
 
 # Regional inference profiles
 REGIONAL_INFERENCE_PROFILES = {
+    "claude-v5-sonnet": {
+        "supported_regions": {
+            "us-east-1": "us",
+            "us-east-2": "us",
+            "us-west-1": "us",
+            "us-west-2": "us",
+            "ca-central-1": "us",
+            "ca-west-1": "us",
+            "eu-central-1": "eu",
+            "eu-central-2": "eu",
+            "eu-north-1": "eu",
+            "eu-south-1": "eu",
+            "eu-south-2": "eu",
+            "eu-west-1": "eu",
+            "eu-west-2": "eu",
+            "eu-west-3": "eu",
+            "ap-southeast-2": "au",
+            "ap-southeast-4": "au",
+        }
+    },
     "claude-v4-opus": {
         "supported_regions": {"us-east-1": "us", "us-east-2": "us", "us-west-2": "us"}
     },
@@ -568,6 +626,7 @@ def is_tooluse_supported(model: type_model_name) -> bool:
 def is_adaptive_thinking_model(model: type_model_name) -> bool:
     """Claude 4.6+ models use adaptive thinking instead of extended thinking with budget_tokens."""
     return model in [
+        "claude-v5-sonnet",
         "claude-v4.6-opus",
         "claude-v4.6-sonnet",
         "claude-v4.7-opus",
@@ -577,6 +636,7 @@ def is_adaptive_thinking_model(model: type_model_name) -> bool:
 def is_prefill_supported(model: type_model_name) -> bool:
     """Claude 4.6+ models do not support assistant message prefilling."""
     return model not in [
+        "claude-v5-sonnet",
         "claude-v4.6-opus",
         "claude-v4.6-sonnet",
         "claude-v4.7-opus",
@@ -585,6 +645,7 @@ def is_prefill_supported(model: type_model_name) -> bool:
 
 def is_specify_both_temperature_and_top_p_supported(model: type_model_name) -> bool:
     return model not in [
+        "claude-v5-sonnet",
         "claude-v4.1-opus",
         "claude-v4.5-opus",
         "claude-v4.6-opus",
@@ -598,6 +659,7 @@ def is_specify_both_temperature_and_top_p_supported(model: type_model_name) -> b
 def is_top_k_supported(model: type_model_name) -> bool:
     """Claude Opus 4.7+ deprecates top_k parameter."""
     return model not in [
+        "claude-v5-sonnet",
         "claude-v4.7-opus",
     ]
 
@@ -605,6 +667,7 @@ def is_top_k_supported(model: type_model_name) -> bool:
 def is_top_p_supported(model: type_model_name) -> bool:
     """Claude Opus 4.7+ deprecates top_p parameter."""
     return model not in [
+        "claude-v5-sonnet",
         "claude-v4.7-opus",
     ]
 
@@ -612,6 +675,7 @@ def is_top_p_supported(model: type_model_name) -> bool:
 def is_temperature_supported(model: type_model_name) -> bool:
     """Claude Opus 4.7+ deprecates temperature parameter."""
     return model not in [
+        "claude-v5-sonnet",
         "claude-v4.7-opus",
     ]
 
@@ -621,6 +685,7 @@ def is_prompt_caching_supported(
 ) -> bool:
     if target == "tool":
         return model in [
+            "claude-v5-sonnet",
             "claude-v4-opus",
             "claude-v4.1-opus",
             "claude-v4.5-opus",
@@ -637,6 +702,7 @@ def is_prompt_caching_supported(
 
     else:
         return model in [
+            "claude-v5-sonnet",
             "claude-v4-opus",
             "claude-v4.1-opus",
             "claude-v4.5-opus",
@@ -1035,7 +1101,7 @@ def generation_params_to_converse_configuration(
             )
 
             if is_adaptive_thinking_model(model):
-                # Claude 4.6 uses adaptive thinking instead of budget_tokens
+                # Claude 4.6+ uses adaptive thinking instead of budget_tokens
                 converse_configuration = {
                     "inferenceConfig": {
                         "maxTokens": max_tokens,

@@ -4,6 +4,7 @@ import boto3
 
 # Definition of supported base models
 supported_base_models = {
+    "anthropic.claude-sonnet-5": "claude-v5-sonnet",
     "anthropic.claude-opus-4-20250514-v1:0": "claude-v4-opus",
     "anthropic.claude-opus-4-6-v1": "claude-v4.6-opus",
     "anthropic.claude-opus-4-7": "claude-v4.7-opus",

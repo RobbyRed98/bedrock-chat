@@ -16,6 +16,11 @@ const translation = {
       adminConsoles: 'สำหรับผู้ดูแลเท่านั้น',
     },
     model: {
+      'claude-v5-sonnet': {
+        label: 'Claude 5 (Sonnet)',
+        description:
+          'โมเดล Sonnet ที่มีความสามารถสูงสุดของ Anthropic ด้วยความฉลาดระดับใกล้เคียง Opus สร้างขึ้นสำหรับการเขียนโค้ด เอเจนต์ และงานระดับมืออาชีพ การคิดแบบปรับตัวทำงานตลอดเวลา',
+      },
       haiku3: {
         label: 'Claude 3 (Haiku)',
         description:

@@ -20,6 +20,11 @@ const translation = {
       userGroups: 'User Groups',
     },
     model: {
+      'claude-v5-sonnet': {
+        label: 'Claude 5 (Sonnet)',
+        description:
+          'Powerful Sonnet model with near-Opus intelligence, built for coding, agents, and professional work at scale. Adaptive thinking is always on.',
+      },
       'claude-v4-opus': {
         label: 'Claude 4 (Opus)',
         description:

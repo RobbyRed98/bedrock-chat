@@ -63,6 +63,12 @@ DEFAULT_LLAMA_GENERATION_CONFIG: GenerationParams = {
 # See: https://aws.amazon.com/bedrock/pricing/
 BEDROCK_PRICING = {
     "us-east-1": {
+        "claude-v5-sonnet": {
+            "input": 0.0022,
+            "output": 0.011,
+            "cache_write_input": 0.00275,
+            "cache_read_input": 0.00022,
+        },
         "claude-v4-opus": {
             "input": 0.015,
             "output": 0.075,
@@ -166,6 +172,12 @@ BEDROCK_PRICING = {
         "llama3-2-90b-instruct": {"input": 0.00072, "output": 0.00072},
     },
     "us-west-2": {
+        "claude-v5-sonnet": {
+            "input": 0.0022,
+            "output": 0.011,
+            "cache_write_input": 0.00275,
+            "cache_read_input": 0.00022,
+        },
         "claude-v4-opus": {
             "input": 0.015,
             "output": 0.075,
@@ -256,6 +268,12 @@ BEDROCK_PRICING = {
     },
     "ap-northeast-1": {},
     "default": {
+        "claude-v5-sonnet": {
+            "input": 0.0022,
+            "output": 0.011,
+            "cache_write_input": 0.00275,
+            "cache_read_input": 0.00022,
+        },
         "claude-v4-opus": {
             "input": 0.015,
             "output": 0.075,

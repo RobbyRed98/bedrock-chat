@@ -16,6 +16,11 @@ const translation = {
       adminConsoles: 'Hanya Admin',
     },
     model: {
+      'claude-v5-sonnet': {
+        label: 'Claude 5 (Sonnet)',
+        description:
+          'Model Sonnet paling mumpuni dari Anthropic dengan kecerdasan mendekati Opus, dirancang untuk pengkodean, agen, dan pekerjaan profesional dalam skala besar. Pemikiran adaptif selalu aktif.',
+      },
       'claude-v3-haiku': {
         label: 'Claude 3 (Haiku)',
         description:

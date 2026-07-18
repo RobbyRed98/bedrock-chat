@@ -16,6 +16,11 @@ const translation = {
       adminConsoles: 'Solo Administrador',
     },
     model: {
+      'claude-v5-sonnet': {
+        label: 'Claude 5 (Sonnet)',
+        description:
+          'El modelo Sonnet más capaz de Anthropic, con inteligencia cercana a Opus, diseñado para codificación, agentes y trabajo profesional a escala. El pensamiento adaptativo está siempre activo.',
+      },
       'claude-v3-haiku': {
         label: 'Claude 3 (Haiku)',
         description:

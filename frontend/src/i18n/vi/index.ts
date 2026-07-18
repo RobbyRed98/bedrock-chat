@@ -16,6 +16,11 @@ const translation = {
       adminConsoles: 'Chỉ dành cho Quản trị',
     },
     model: {
+      'claude-v5-sonnet': {
+        label: 'Claude 5 (Sonnet)',
+        description:
+          'Mô hình Sonnet mạnh mẽ nhất của Anthropic với trí thông minh gần đạt mức Opus, được xây dựng cho lập trình, tác nhân và công việc chuyên nghiệp ở quy mô lớn. Tư duy thích ứng luôn được bật.',
+      },
       'claude-v3-haiku': {
         label: 'Claude 3 (Haiku)',
         description:

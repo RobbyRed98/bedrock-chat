@@ -23,6 +23,11 @@ const translation: typeof en = {
       backChat: 'チャットに戻る',
     },
     model: {
+      'claude-v5-sonnet': {
+        label: 'Claude 5 (Sonnet)',
+        description:
+          'Anthropicの最も高性能なSonnetモデル。Opusに迫る知能を持ち、コーディング、エージェント、プロフェッショナルな業務に最適。アダプティブ思考が常時有効。',
+      },
       'claude-v4-opus': {
         label: 'Claude 4 (Opus)',
         description:
