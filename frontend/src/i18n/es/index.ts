@@ -61,6 +61,11 @@ const translation = {
         description:
           'El modelo Opus más capaz, adecuado para codificación agéntica, trabajo del conocimiento y tareas de larga duración.',
       },
+      'claude-v5.5-haiku': {
+        label: 'Claude 5.5 (Haiku)',
+        description:
+          'El modelo Claude 5.5 más rápido y eficiente para tareas de gran volumen y sensibles a la latencia.',
+      },
       'claude-v3-opus': {
         label: 'Claude 3 (Opus)',
         description: 'Modelo potente para tareas altamente complejas.',

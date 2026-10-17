@@ -61,6 +61,11 @@ const translation = {
         description:
           'Mô hình Opus có năng lực cao nhất, phù hợp cho lập trình agentic, công việc tri thức và các tác vụ dài hạn.',
       },
+      'claude-v5.5-haiku': {
+        label: 'Claude 5.5 (Haiku)',
+        description:
+          'Mô hình Claude 5.5 nhanh nhất và hiệu quả nhất cho các tác vụ khối lượng lớn, yêu cầu độ trễ thấp.',
+      },
       'claude-v3-opus': {
         label: 'Claude 3 (Opus)',
         description: 'Mô hình mạnh mẽ cho các tác vụ cực kỳ phức tạp.',

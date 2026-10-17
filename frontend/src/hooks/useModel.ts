@@ -126,6 +126,13 @@ const useModel = (botId?: string | null, activeModels?: ActiveModels) => {
         supportReasoning: true,
       },
       {
+        modelId: 'claude-v5.5-haiku',
+        label: t('model.claude-v5.5-haiku.label'),
+        description: t('model.claude-v5.5-haiku.description'),
+        supportMediaType: CLAUDE_SUPPORTED_MEDIA_TYPES,
+        supportReasoning: true,
+      },
+      {
         modelId: 'claude-v4-sonnet',
         label: t('model.claude-v4-sonnet.label'),
         description: t('model.claude-v4-sonnet.description'),

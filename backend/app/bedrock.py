@@ -63,6 +63,7 @@ BASE_MODEL_IDS = {
     "claude-v4.6-opus": "anthropic.claude-opus-4-6-v1",
     "claude-v4.7-opus": "anthropic.claude-opus-4-7",
     "claude-v5.5-opus": "anthropic.claude-opus-5-5",
+    "claude-v5.5-haiku": "anthropic.claude-haiku-5-5",
     "claude-v4-sonnet": "anthropic.claude-sonnet-4-20250514-v1:0",
     "claude-v4.5-sonnet": "anthropic.claude-sonnet-4-5-20250929-v1:0",
     "claude-v4.6-sonnet": "anthropic.claude-sonnet-4-6",
@@ -234,6 +235,43 @@ GLOBAL_INFERENCE_PROFILES = {
             "ap-northeast-1",
         ]
     },
+    "claude-v5.5-haiku": {
+        "supported_regions": [
+            "us-west-2",
+            "us-west-1",
+            "us-east-2",
+            "us-east-1",
+            "sa-east-1",
+            "mx-central-1",
+            "me-south-1",
+            "me-central-1",
+            "il-central-1",
+            "eu-west-3",
+            "eu-west-2",
+            "eu-west-1",
+            "eu-south-2",
+            "eu-south-1",
+            "eu-north-1",
+            "eu-central-2",
+            "eu-central-1",
+            "ca-central-1",
+            "ca-west-1",
+            "ap-southeast-7",
+            "ap-southeast-6",
+            "ap-southeast-5",
+            "ap-southeast-4",
+            "ap-southeast-3",
+            "ap-southeast-2",
+            "ap-southeast-1",
+            "ap-south-2",
+            "ap-south-1",
+            "ap-northeast-3",
+            "ap-northeast-2",
+            "ap-northeast-1",
+            "ap-east-2",
+            "af-south-1",
+        ]
+    },
     "claude-v4-sonnet": {
         "supported_regions": [
             "us-west-2",
@@ -394,6 +432,28 @@ REGIONAL_INFERENCE_PROFILES = {
         }
     },
     "claude-v5.5-opus": {
+        "supported_regions": {
+            "us-east-1": "us",
+            "us-east-2": "us",
+            "us-west-1": "us",
+            "us-west-2": "us",
+            "ca-central-1": "us",
+            "ca-west-1": "us",
+            "eu-central-1": "eu",
+            "eu-central-2": "eu",
+            "eu-north-1": "eu",
+            "eu-south-1": "eu",
+            "eu-south-2": "eu",
+            "eu-west-1": "eu",
+            "eu-west-2": "eu",
+            "eu-west-3": "eu",
+            "ap-northeast-1": "jp",
+            "ap-northeast-3": "jp",
+            "ap-southeast-2": "au",
+            "ap-southeast-4": "au",
+        }
+    },
+    "claude-v5.5-haiku": {
         "supported_regions": {
             "us-east-1": "us",
             "us-east-2": "us",
@@ -725,6 +785,7 @@ def is_adaptive_thinking_model(model: type_model_name) -> bool:
         "claude-v4.6-sonnet",
         "claude-v4.7-opus",
         "claude-v5.5-opus",
+        "claude-v5.5-haiku",
     ]
 
 
@@ -735,6 +796,7 @@ def is_prefill_supported(model: type_model_name) -> bool:
         "claude-v4.6-sonnet",
         "claude-v4.7-opus",
         "claude-v5.5-opus",
+        "claude-v5.5-haiku",
     ]
 
 
@@ -745,6 +807,7 @@ def is_specify_both_temperature_and_top_p_supported(model: type_model_name) -> b
         "claude-v4.6-opus",
         "claude-v4.7-opus",
         "claude-v5.5-opus",
+        "claude-v5.5-haiku",
         "claude-v4.5-sonnet",
         "claude-v4.6-sonnet",
         "claude-v4.5-haiku",
@@ -756,6 +819,7 @@ def is_top_k_supported(model: type_model_name) -> bool:
     return model not in [
         "claude-v4.7-opus",
         "claude-v5.5-opus",
+        "claude-v5.5-haiku",
     ]
 
 
@@ -764,6 +828,7 @@ def is_top_p_supported(model: type_model_name) -> bool:
     return model not in [
         "claude-v4.7-opus",
         "claude-v5.5-opus",
+        "claude-v5.5-haiku",
         "gpt-6-sol",
         "gpt-6-luna",
         "gpt-6-astra",
@@ -775,6 +840,7 @@ def is_temperature_supported(model: type_model_name) -> bool:
     return model not in [
         "claude-v4.7-opus",
         "claude-v5.5-opus",
+        "claude-v5.5-haiku",
         "gpt-6-sol",
         "gpt-6-luna",
         "gpt-6-astra",
@@ -803,6 +869,7 @@ def is_prompt_caching_supported(
             "claude-v4.6-opus",
             "claude-v4.7-opus",
             "claude-v5.5-opus",
+            "claude-v5.5-haiku",
             "claude-v4-sonnet",
             "claude-v4.5-sonnet",
             "claude-v4.6-sonnet",
@@ -820,6 +887,7 @@ def is_prompt_caching_supported(
             "claude-v4.6-opus",
             "claude-v4.7-opus",
             "claude-v5.5-opus",
+            "claude-v5.5-haiku",
             "claude-v4-sonnet",
             "claude-v4.5-sonnet",
             "claude-v4.6-sonnet",

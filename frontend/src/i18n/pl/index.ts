@@ -61,6 +61,11 @@ const translation = {
         description:
           'Model Opus o największych możliwościach, odpowiedni do kodowania agentowego, pracy opartej na wiedzy i długotrwałych zadań.',
       },
+      'claude-v5.5-haiku': {
+        label: 'Claude 5.5 (Haiku)',
+        description:
+          'Najszybszy i najbardziej wydajny model Claude 5.5 do zadań o dużej skali, wrażliwych na opóźnienia.',
+      },
       'claude-v3-opus': {
         label: 'Claude 3 (Opus)',
         description: 'Potężny model do wysoce złożonych zadań.',

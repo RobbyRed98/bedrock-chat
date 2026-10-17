@@ -50,6 +50,11 @@ const translation = {
         description:
           'Most capable Opus model suitable for agentic coding, knowledge work, and long-running tasks.',
       },
+      'claude-v5.5-haiku': {
+        label: 'Claude 5.5 (Haiku)',
+        description:
+          'Fastest, most efficient Claude 5.5 model for high-volume, latency-sensitive tasks.',
+      },
       'claude-v4-sonnet': {
         label: 'Claude 4 (Sonnet)',
         description:

@@ -61,6 +61,11 @@ const translation = {
         description:
           'Model Opus dengan kemampuan tertinggi, cocok untuk coding agentik, pekerjaan berbasis pengetahuan, dan tugas jangka panjang.',
       },
+      'claude-v5.5-haiku': {
+        label: 'Claude 5.5 (Haiku)',
+        description:
+          'Model Claude 5.5 tercepat dan paling efisien untuk tugas bervolume tinggi yang sensitif terhadap latensi.',
+      },
       'claude-v3-opus': {
         label: 'Claude 3 (Opus)',
         description: 'Model yang kuat untuk tugas-tugas yang sangat kompleks.',
