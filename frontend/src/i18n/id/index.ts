@@ -61,6 +61,11 @@ const translation = {
         description:
           'Model Opus dengan kemampuan tertinggi, cocok untuk coding agentik, pekerjaan berbasis pengetahuan, dan tugas jangka panjang.',
       },
+      'claude-v5.5-sonnet': {
+        label: 'Claude 5.5 (Sonnet)',
+        description:
+          'Model Sonnet yang lebih cerdas dan efisien untuk coding dan pekerjaan berbasis pengetahuan dengan biaya per tugas yang lebih rendah.',
+      },
       'claude-v3-opus': {
         label: 'Claude 3 (Opus)',
         description: 'Model yang kuat untuk tugas-tugas yang sangat kompleks.',

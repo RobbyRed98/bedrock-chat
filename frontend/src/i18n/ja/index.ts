@@ -53,6 +53,11 @@ const translation: typeof en = {
         description:
           'エージェント型コーディング、ナレッジワーク、長時間のタスクに適した最高性能のOpusモデル。',
       },
+      'claude-v5.5-sonnet': {
+        label: 'Claude 5.5 (Sonnet)',
+        description:
+          'コーディングやナレッジワーク向けに、より賢く効率的になったSonnetモデル。タスクあたりのコストも低減。',
+      },
       'claude-v4-sonnet': {
         label: 'Claude 4 (Sonnet)',
         description:
