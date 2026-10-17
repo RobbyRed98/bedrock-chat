@@ -178,6 +178,52 @@ class TestGetModelId(unittest.TestCase):
                         {"type": "adaptive"},
                     )
 
+    def test_get_model_id_claude_sonnet_5_5(self):
+        """Claude Sonnet 5.5 has no jp geo profile, so Tokyo only gets the global profile"""
+        for region, enable_global, expected_model_id in [
+            ("us-east-1", True, "global.anthropic.claude-sonnet-5-5"),
+            ("us-east-1", False, "us.anthropic.claude-sonnet-5-5"),
+            ("ca-west-1", False, "us.anthropic.claude-sonnet-5-5"),
+            ("eu-west-2", False, "eu.anthropic.claude-sonnet-5-5"),
+            ("eu-central-2", False, "eu.anthropic.claude-sonnet-5-5"),
+            ("ap-southeast-4", False, "au.anthropic.claude-sonnet-5-5"),
+            ("ap-northeast-1", True, "global.anthropic.claude-sonnet-5-5"),
+            ("me-central-1", True, "global.anthropic.claude-sonnet-5-5"),
+        ]:
+            with self.subTest(region=region, enable_global=enable_global):
+                self.assertEqual(
+                    get_model_id(
+                        "claude-v5.5-sonnet",
+                        enable_global=enable_global,
+                        enable_cross_region=True,
+                        bedrock_region=region,
+                    ),
+                    expected_model_id,
+                )
+
+    def test_compose_args_claude_sonnet_5_5_omits_sampling_params(self):
+        """Claude Sonnet 5.5 rejects temperature, top_p and top_k like Opus 5.5"""
+        for enable_reasoning in [False, True]:
+            with self.subTest(enable_reasoning=enable_reasoning):
+                args = compose_args_for_converse_api(
+                    messages=[
+                        SimpleMessageModel(
+                            role="user",
+                            content=[TextContentModel(content_type="text", body="Hi")],
+                        )
+                    ],
+                    model="claude-v5.5-sonnet",
+                    enable_reasoning=enable_reasoning,
+                )
+                self.assertNotIn("temperature", args["inferenceConfig"])
+                self.assertNotIn("topP", args["inferenceConfig"])
+                self.assertNotIn("top_k", args["additionalModelRequestFields"])
+                if enable_reasoning:
+                    self.assertEqual(
+                        args["additionalModelRequestFields"]["thinking"],
+                        {"type": "adaptive"},
+                    )
+
     def test_get_model_id_openai_gpt_6(self):
         """GPT-6 is inference-profile only: global. everywhere, us. in North America"""
         for model in ["gpt-6-sol", "gpt-6-luna", "gpt-6-astra"]:

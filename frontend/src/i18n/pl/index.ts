@@ -61,6 +61,11 @@ const translation = {
         description:
           'Model Opus o największych możliwościach, odpowiedni do kodowania agentowego, pracy opartej na wiedzy i długotrwałych zadań.',
       },
+      'claude-v5.5-sonnet': {
+        label: 'Claude 5.5 (Sonnet)',
+        description:
+          'Inteligentniejszy i wydajniejszy model Sonnet do kodowania i pracy opartej na wiedzy, przy niższym koszcie na zadanie.',
+      },
       'claude-v3-opus': {
         label: 'Claude 3 (Opus)',
         description: 'Potężny model do wysoce złożonych zadań.',

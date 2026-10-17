@@ -50,6 +50,11 @@ const translation = {
         description:
           'Most capable Opus model suitable for agentic coding, knowledge work, and long-running tasks.',
       },
+      'claude-v5.5-sonnet': {
+        label: 'Claude 5.5 (Sonnet)',
+        description:
+          'Smarter, more efficient Sonnet model for coding and knowledge work at a lower cost per task.',
+      },
       'claude-v4-sonnet': {
         label: 'Claude 4 (Sonnet)',
         description:

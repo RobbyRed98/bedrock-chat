@@ -61,6 +61,11 @@ const translation = {
         description:
           'Mô hình Opus có năng lực cao nhất, phù hợp cho lập trình agentic, công việc tri thức và các tác vụ dài hạn.',
       },
+      'claude-v5.5-sonnet': {
+        label: 'Claude 5.5 (Sonnet)',
+        description:
+          'Mô hình Sonnet thông minh và hiệu quả hơn cho lập trình và công việc tri thức, với chi phí cho mỗi tác vụ thấp hơn.',
+      },
       'claude-v3-opus': {
         label: 'Claude 3 (Opus)',
         description: 'Mô hình mạnh mẽ cho các tác vụ cực kỳ phức tạp.',

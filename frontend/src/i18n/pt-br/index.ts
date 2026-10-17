@@ -68,6 +68,11 @@ const translation = {
         description:
           'O modelo Opus mais capaz, adequado para codificação agêntica, trabalho do conhecimento e tarefas de longa duração.',
       },
+      'claude-v5.5-sonnet': {
+        label: 'Claude 5.5 (Sonnet)',
+        description:
+          'Modelo Sonnet mais inteligente e eficiente para programação e trabalho do conhecimento, com menor custo por tarefa.',
+      },
       'claude-v3-opus': {
         label: 'Claude 3 (Opus)',
         description: 'Modelo poderoso para tarefas altamente complexas.',
