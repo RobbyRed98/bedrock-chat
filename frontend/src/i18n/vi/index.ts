@@ -66,6 +66,11 @@ const translation = {
         description:
           'Mô hình Sonnet thông minh và hiệu quả hơn cho lập trình và công việc tri thức, với chi phí cho mỗi tác vụ thấp hơn.',
       },
+      'claude-v5.5-haiku': {
+        label: 'Claude 5.5 (Haiku)',
+        description:
+          'Mô hình Claude 5.5 nhanh nhất và hiệu quả nhất cho các tác vụ khối lượng lớn, yêu cầu độ trễ thấp.',
+      },
       'claude-v3-opus': {
         label: 'Claude 3 (Opus)',
         description: 'Mô hình mạnh mẽ cho các tác vụ cực kỳ phức tạp.',

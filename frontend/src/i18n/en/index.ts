@@ -55,6 +55,11 @@ const translation = {
         description:
           'Smarter, more efficient Sonnet model for coding and knowledge work at a lower cost per task.',
       },
+      'claude-v5.5-haiku': {
+        label: 'Claude 5.5 (Haiku)',
+        description:
+          'Fastest, most efficient Claude 5.5 model for high-volume, latency-sensitive tasks.',
+      },
       'claude-v4-sonnet': {
         label: 'Claude 4 (Sonnet)',
         description:

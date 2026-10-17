@@ -108,6 +108,12 @@ BEDROCK_PRICING = {
             "cache_write_input": 0.00275,
             "cache_read_input": 0.00011,
         },
+        "claude-v5.5-haiku": {
+            "input": 0.00011,
+            "output": 0.00055,
+            "cache_write_input": 0.0001375,
+            "cache_read_input": 0.000011,
+        },
         "claude-v4-sonnet": {
             "input": 0.003,
             "output": 0.015,
@@ -227,6 +233,12 @@ BEDROCK_PRICING = {
             "cache_write_input": 0.00275,
             "cache_read_input": 0.00011,
         },
+        "claude-v5.5-haiku": {
+            "input": 0.00011,
+            "output": 0.00055,
+            "cache_write_input": 0.0001375,
+            "cache_read_input": 0.000011,
+        },
         "claude-v4-sonnet": {
             "input": 0.003,
             "output": 0.015,
@@ -338,6 +350,12 @@ BEDROCK_PRICING = {
             "output": 0.011,
             "cache_write_input": 0.00275,
             "cache_read_input": 0.00011,
+        },
+        "claude-v5.5-haiku": {
+            "input": 0.00011,
+            "output": 0.00055,
+            "cache_write_input": 0.0001375,
+            "cache_read_input": 0.000011,
         },
         "claude-v4-sonnet": {
             "input": 0.003,

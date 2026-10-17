@@ -73,6 +73,11 @@ const translation = {
         description:
           'Modelo Sonnet mais inteligente e eficiente para programação e trabalho do conhecimento, com menor custo por tarefa.',
       },
+      'claude-v5.5-haiku': {
+        label: 'Claude 5.5 (Haiku)',
+        description:
+          'O modelo Claude 5.5 mais rápido e eficiente para tarefas de alto volume e sensíveis à latência.',
+      },
       'claude-v3-opus': {
         label: 'Claude 3 (Opus)',
         description: 'Modelo poderoso para tarefas altamente complexas.',
